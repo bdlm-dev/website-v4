@@ -1,5 +1,4 @@
 <script>
-    import { onMount } from 'svelte';
     import { slide } from 'svelte/transition';
     import { selected } from './data.js'
     import { navOpen } from '../stores.js'
@@ -20,11 +19,11 @@
 		<li class="mx-auto min-w-[320px] max-w-[600px] mb-4 pl-4 pr-6" for={`id-${ref}`} in:slide|global={{duration: 1000}}>
             <label class="flex flex-col w-full bg-stone-700 hover:bg-stone-600 rounded-lg items-center cursor-pointer transition-all ease-linear duration-200 px-2 py-1" for={`id-${ref}`}>
                 <div class="case-nav w-full flex flex-row items-center h-[50px]">
-                    <input type="radio" id={`id-${ref}`} name="select" class="opacity-0 w-1 peer cursor-pointer" checked={$selected === ref} on:change={() => {selected.set(ref)}}>
+                    <input type="radio" id={`id-${ref}`} name="select" class="opacity-0 w-1 peer cursor-pointer" checked={$selected === ref} on:change={() => {selected.set(ref)}} tabindex=-1>
                     <span class="font-bold text-xl ml-2">{title}</span>
                     <div class="link-container ml-auto">
                         {#if links}
-                            <a href={links.github} class="w-7 grid place-items-center fill-stone-500 hover:fill-stone-200" target=_blank>
+                            <a href={links.github} class="w-7 grid place-items-center fill-stone-500 hover:fill-stone-200" target=_blank aria-label={`Github link to ${title}`} tabindex={$navOpen ? -1 : 0}>
                                 <svelte:component this={lang_dict["github"]} />
                             </a>
                         {/if}
