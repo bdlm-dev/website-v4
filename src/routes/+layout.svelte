@@ -7,7 +7,6 @@
     import { cubicOut } from 'svelte/easing';
 
     import { navOpen } from './stores.js';
-    import { navigating } from '$app/stores';
     import { beforeNavigate, goto } from '$app/navigation';
 
     // Thanks https://stackblitz.com/edit/delay-navigation-sveltekit?file=src%2Froutes%2Fpage.svelte for navigation transitions :))
@@ -72,7 +71,7 @@
                 in:slide={{delay: 50, duration: 500, easing: cubicOut, axis: 'x'}}
                 out:slide={{duration: 500, easing: cubicOut, axis: 'x'}} 
                 class="bg-blue-500 h-screen w-screen overflow-hidden">
-                    <div class="menu-interacts flex flex-col align-middle justify-center items-center text-4xl mg:text-5xl lg:text-6xl font-bold gap-2 md:gap-8 lg:gap-12 my-auto h-screen max-h-fit transition-[gap] ease-linear duration-200">
+                    <div class="menu-interacts flex  flex-col align-middle justify-center items-center text-4xl mg:text-5xl lg:text-6xl font-bold gap-2 md:gap-8 lg:gap-12 my-auto h-full transition-[gap] ease-linear duration-200">
                         {#each navOptions as option}
                             <a 
                             href={option.href} 
@@ -90,8 +89,8 @@
         <slot />
     </main>
 
-    <footer class="w-screen min-h-[70px] bg-stone-800 text-center text-stone-400 text-sm">
-        <span class=" mt-4 inline-block ">Built with <span class="text-orange-600 font-bold">SvelteKit</span> and <span class="text-sky-500 font-bold">Tailwind</span>,</span>
+    <footer class="w-screen min-h-[70px] bg-stone-800 text-center text-stone-200 text-sm">
+        <span class=" mt-4 inline-block ">Built with <span class="text-orange-500 font-bold">SvelteKit</span> and <span class="text-sky-500 font-bold">Tailwind</span>,</span>
         <span class="block">by <span class="name-gradient">April Miller</span></span>
     </footer>
 </div>
