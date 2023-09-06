@@ -2,11 +2,6 @@
     import { navOpen } from './stores.js';
     import Tooltip from '../components/Tooltip.svelte';
 
-    const handleNamePress = (e) => {
-        if (e.key == "Tab") return;
-        window.location.assign("/about");
-    }
-
     const navOptions = [
         //{name: "resources", href:"/resources"}, todo later, prio is deploy
         {name: "portfolio", href:"/portfolio"},
@@ -27,7 +22,7 @@
             </a>
         </div>
     </div>
-    <div class="h-[500px] w-screen text-center grid grid-rows-2 mb-40">
+    <div class="h-[500px] w-screen text-center grid grid-rows-2 mb-20">
         <div class="flex flex-col justify-center items-center text-2xl lg:text-4xl" id="tag">
             <span>a <Tooltip tooltip="Computer Science @ Brunel University">student</Tooltip> interested in anything tech,</span>
             <span>finding delight in solving new problems</span>
