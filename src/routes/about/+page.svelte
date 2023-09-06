@@ -2,8 +2,6 @@
     import { slide } from 'svelte/transition';
     import { onMount } from 'svelte';
 
-    import Tooltip from '../../components/Tooltip.svelte';
-
     let loaded = false;
 
     const paragraphs = [
@@ -32,5 +30,5 @@
         </div>
         {/each}
     {/if}
-    <hr class="w-[500px] box-content justify-self-center bg-stone-500 opacity-50 mb-6">
+    <hr class="w-[200px] box-content justify-self-center bg-stone-500 opacity-50 mb-6">
 </div>
