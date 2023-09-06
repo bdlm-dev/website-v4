@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply bg-stone-900;
+        @apply text-stone-200;
+        @apply overflow-x-hidden;
+        scroll-behavior: smooth;
+    }
+
+    .name-gradient {
+        @apply gradient-animate bg-clip-text font-bold bg-gradient-to-r from-pink-300 via-purple-300 to-sky-400 text-transparent;
+    }
+
+    .gradient-animate {
+        background-size: 400%;
+
+        -webkit-animation: backgroundAnimate 3s ease infinite;
+        -moz-animation: backgroundAnimate 3s ease infinite;
+        animation: backgroundAnimate 3s ease infinite;
+    }
+
+    @keyframes backgroundAnimate {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .about-topic {
+      @apply bg-gradient-to-l from-rose-900 to-blue-900 bg-opacity-30 rounded-3xl drop-shadow-2xl;
+  }
+  .about-topic:nth-child(2n) {
+    @apply bg-gradient-to-r from-rose-900 to-blue-900
+  }
+}
