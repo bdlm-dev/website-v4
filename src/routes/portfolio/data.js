@@ -11,6 +11,9 @@ export const posts = [
         languages: ['html', 'css', 'js', 'svelte', 'tailwind'],
         brief: 'This very website designed with Figma, and built with various web technologies.',
         img: {src: 'webpagelanding.webp', width: 650, height: 344}, // within /static/images
+        links: {
+            github: 'https://github.com/bdlm-dev/website-v4/'
+        }
 	},
     {
         ref: 'winch',
