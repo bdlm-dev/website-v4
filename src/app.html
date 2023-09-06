@@ -8,6 +8,7 @@
 		<meta name="keywords" content="Web Development, Developer, Computer Science, Student, HTML, CSS, Javascript, Svelte, Tailwind, UI/UX, UX" />
 		<meta name="author" content="April Miller" />
 		<meta name="robots" content="follow">
+		<meta name="theme-color" content="#317EFB"/>
 		<title>itisapril.dev</title>
 		%sveltekit.head%
 	</head>
@@ -15,16 +16,15 @@
 		<div style="display: contents">%sveltekit.body%</div>
 
 		<script>
+			// only bothering with dark mode atm, light *may* come later.
 			//const themeValue = JSON.parse(localStorage.getItem('svelte:theme'))?.current;
-			const systemPreferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
-			//	? 'dark'
-			//	: 'light';
+			const systemPreferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; // removing this causes annoying popup below for some reason.
 
-			document.body.classList.remove('light', 'dark');
-			document.body.classList.add(systemPreferredTheme ?? 'dark');
+			// document.body.classList.remove('light', 'dark');
+			// document.body.classList.add(systemPreferredTheme ?? 'dark');
 			// deal with storing theme cookie later.
 
-			// prevents "are you sure you want to leave this site? you may lose saved blalbalbalbalbalbalblablabla"
+			// prevents "are you sure you want to leave this site? you may lose saved blalbalbalbalbalbalblablabla" (only sometimes though)
 			window.addEventListener('beforeunload', function (event) {
 				event.stopImmediatePropagation();
 			});
