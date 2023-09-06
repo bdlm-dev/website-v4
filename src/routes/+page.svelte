@@ -20,7 +20,7 @@
     <div class="container h-screen w-screen text-center grid place-items-center overflow-x-hidden mx-auto">
         <div>
             <h1 class="h-min text-6xl lg:text-8xl ">itisapril<span class="text-neutral-500">.dev</span></h1>
-            <a class="mx-auto mt-8 w-fit block z-5 fill-neutral-500 hover:fill-neutral-200" href="#tag" tabindex={$navOpen ? -1 : 0}>
+            <a class="mx-auto mt-8 w-fit block z-5 fill-neutral-500 hover:fill-neutral-200" href="#tag" tabindex={$navOpen ? -1 : 0} aria-label="Navigate down button">
                 <svg class="cursor-pointer pointer-events-auto  animate-bounce " xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 24 29">
                     <path d="M13.5 2C13.5 1.17157 12.8284 0.5 12 0.5C11.1716 0.5 10.5 1.17157 10.5 2L13.5 2ZM10.9393 28.0607C11.5251 28.6464 12.4749 28.6464 13.0607 28.0607L22.6066 18.5147C23.1924 17.9289 23.1924 16.9792 22.6066 16.3934C22.0208 15.8076 21.0711 15.8076 20.4853 16.3934L12 24.8787L3.51472 16.3934C2.92893 15.8076 1.97918 15.8076 1.3934 16.3934C0.807611 16.9792 0.807611 17.9289 1.3934 18.5147L10.9393 28.0607ZM10.5 2L10.5 27L13.5 27L13.5 2L10.5 2Z"/>
                 </svg>
@@ -38,7 +38,7 @@
             class="name-large font-bold text-8xl cursor-pointer " 
             href="/about"
             tabindex={$navOpen ? -1 : 0}>april</a> 
-            <span class="inline-block text-stone-600 font-bold ml-20 opacity-30"> click me :)</span>
+            <span class="inline-block text-stone-300 italic ml-20 opacity-100"> click me :)</span>
         </div>
     </div>
     <div class=" w-screen grid grid-cols-1 lg:grid-cols-2 place-items-center mb-8">
