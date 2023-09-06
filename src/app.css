@@ -31,11 +31,4 @@
       background-position: 100% 50%;
     }
   }
-
-  .about-topic {
-      @apply bg-gradient-to-l from-rose-900 to-blue-900 bg-opacity-30 rounded-3xl drop-shadow-2xl;
-  }
-  .about-topic:nth-child(2n) {
-    @apply bg-gradient-to-r from-rose-900 to-blue-900
-  }
 }
